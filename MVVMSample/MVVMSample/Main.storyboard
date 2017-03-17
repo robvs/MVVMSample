@@ -57,11 +57,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FjD-nk-ex1" id="IEu-FA-mwy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="spH-sG-LJi">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="-714.39999999999998" y="127.28635682158921"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Titles-->
         <scene sceneID="4lx-EH-fFE">
             <objects>
-                <viewController id="X3j-iE-gQP" sceneMemberID="viewController">
+                <viewController id="X3j-iE-gQP" customClass="TitleListViewController" customModule="MVVMSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CSP-Kc-uDM"/>
                         <viewControllerLayoutGuide type="bottom" id="sJF-Th-j0y"/>
@@ -117,12 +117,54 @@
                     <view key="view" contentMode="scaleToFill" id="Mum-cm-b2o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8lx-xh-4ko">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieTitleCellId" textLabel="vXt-qJ-iwl" style="IBUITableViewCellStyleDefault" id="a8g-VE-tFF">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a8g-VE-tFF" id="zN7-Q9-pln">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vXt-qJ-iwl">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1Np-wP-mvk" userLabel="Activity Indicator">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Np-wP-mvk" firstAttribute="centerY" secondItem="Mum-cm-b2o" secondAttribute="centerY" id="Ani-dx-Y3I"/>
+                            <constraint firstItem="8lx-xh-4ko" firstAttribute="leading" secondItem="Mum-cm-b2o" secondAttribute="leading" id="dkK-nZ-c7a"/>
+                            <constraint firstItem="8lx-xh-4ko" firstAttribute="top" secondItem="CSP-Kc-uDM" secondAttribute="bottom" id="gf9-ax-YiQ"/>
+                            <constraint firstItem="sJF-Th-j0y" firstAttribute="top" secondItem="8lx-xh-4ko" secondAttribute="bottom" id="oEp-Ma-gcE"/>
+                            <constraint firstAttribute="trailing" secondItem="8lx-xh-4ko" secondAttribute="trailing" id="vFc-Ba-3Oh"/>
+                            <constraint firstItem="1Np-wP-mvk" firstAttribute="centerX" secondItem="Mum-cm-b2o" secondAttribute="centerX" id="w5E-mx-1qo"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Movie Titles" id="YIC-p0-wqb"/>
+                    <connections>
+                        <outlet property="headingTitleNavItem" destination="YIC-p0-wqb" id="IxB-4u-0fr"/>
+                        <outlet property="loadingActivityIndicator" destination="1Np-wP-mvk" id="5Oq-v8-1u8"/>
+                        <outlet property="titlesTableView" destination="8lx-xh-4ko" id="TFg-fQ-kAn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hva-R8-T54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="128"/>
+            <point key="canvasLocation" x="88.799999999999997" y="127.28635682158921"/>
         </scene>
     </scenes>
 </document>

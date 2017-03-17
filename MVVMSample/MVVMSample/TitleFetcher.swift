@@ -26,7 +26,7 @@ extension TitleFetcher: TitleFetchable {
         
         // To keep things simple, this fakes an asynchronous service call by waiting
         // a small amount of time before calling the completion closure.
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1000)) {
             completion(TitleFetcher.getTitles(forGenre: genre))
         }
     }

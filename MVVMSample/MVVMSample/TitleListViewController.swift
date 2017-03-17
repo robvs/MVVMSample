@@ -15,11 +15,17 @@ class TitleListViewController: UIViewController {
     /// view can not function without it, much like outlets.
     var viewModel: TitleListViewModel!
     
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var headingTitleNavItem: UINavigationItem!
+    @IBOutlet weak var titlesTableView: UITableView!
     
     // MARK: - View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titlesTableView.delegate   = self
+        titlesTableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +51,12 @@ fileprivate extension TitleListViewController {
     
     func populateView() {
         
+        headingTitleNavItem.title = viewModel.headingTitle
+        
+        viewModel.shouldShowLoadingSpinner ? loadingActivityIndicator.startAnimating() :
+                                             loadingActivityIndicator.stopAnimating()
+        
+        titlesTableView.reloadData()
     }
 }
 
@@ -54,12 +66,34 @@ fileprivate extension TitleListViewController {
 extension TitleListViewController: TitleListViewModelDelegate {
     
     func refreshDidStart() {
-        
         populateView()
     }
     
     func relreshDidComplete() {
-        
         populateView()
+    }
+}
+
+
+// MARK: - UITableViewDelegate conformance
+
+extension TitleListViewController: UITableViewDelegate {
+}
+
+
+// MARK: - UITableViewDataSource conformance
+
+extension TitleListViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return viewModel.titleCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieTitleCellId", for: indexPath)
+        cell.textLabel?.text = viewModel.title(forIndex: indexPath.row)
+        return cell
     }
 }
