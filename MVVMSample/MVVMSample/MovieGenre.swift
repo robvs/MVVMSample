@@ -7,6 +7,7 @@
 //
 
 enum MovieGenreId: Int {
+    case none
     case action
     case comedy
     case horror

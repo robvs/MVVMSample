@@ -6,11 +6,15 @@
 //  Copyright © 2017 Random Visual. All rights reserved.
 //
 
+
+// MARK: - Protocols that enable delegates to be injected into the view model.
+
 /// Enables fetching titles for a specified genre.
 protocol TitleFetchable {
     
-    func fetchTitles(foreGenre genre: String, completion: ([String]) -> Void)
+    func fetchTitles(forGenre genre: MovieGenreId, completion: @escaping ([String]) -> Void)
 }
+
 
 /// Callbacks to inform the delegate of state changes.
 protocol TitleListViewModelDelegate: class {
@@ -18,6 +22,9 @@ protocol TitleListViewModelDelegate: class {
     func refreshDidStart()
     func relreshDidComplete()
 }
+
+
+// MARK: - View model definition
 
 /// View model that drives the dynamic contents of the Title List view.
 struct TitleListViewModel {
@@ -48,6 +55,7 @@ extension TitleListViewModel {
     func refresh() {
         
         delegate?.refreshDidStart()
+        
         
         
     }
