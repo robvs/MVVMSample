@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0673341E81F192009643DD /* TitleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF79071E71F29000B84DDA /* TitleFetcher.swift */; };
 		7F2988A51E78145700DDB686 /* MovieGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2988A41E78145700DDB686 /* MovieGenre.swift */; };
 		7F2988A61E78145700DDB686 /* MovieGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2988A41E78145700DDB686 /* MovieGenre.swift */; };
 		7FAF78DC1E71E40700B84DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF78DB1E71E40700B84DDA /* AppDelegate.swift */; };
 		7FAF78E31E71E40700B84DDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FAF78E21E71E40700B84DDA /* Assets.xcassets */; };
 		7FAF78E61E71E40700B84DDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FAF78E41E71E40700B84DDA /* LaunchScreen.storyboard */; };
-		7FAF78F11E71E40800B84DDA /* MVVMSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF78F01E71E40800B84DDA /* MVVMSampleTests.swift */; };
 		7FAF78FC1E71E50E00B84DDA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF78FB1E71E50E00B84DDA /* HomeViewController.swift */; };
 		7FAF78FE1E71E66C00B84DDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF78FD1E71E66C00B84DDA /* HomeViewModel.swift */; };
 		7FAF78FF1E71E66C00B84DDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF78FD1E71E66C00B84DDA /* HomeViewModel.swift */; };
@@ -21,6 +21,7 @@
 		7FAF79051E71F14500B84DDA /* TitleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF79041E71F14500B84DDA /* TitleListViewModel.swift */; };
 		7FAF79061E71F14500B84DDA /* TitleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF79041E71F14500B84DDA /* TitleListViewModel.swift */; };
 		7FAF79081E71F29000B84DDA /* TitleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF79071E71F29000B84DDA /* TitleFetcher.swift */; };
+		7FF7C0A41E7C50F9007A7355 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF7C0A31E7C50F9007A7355 /* HomeViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,6 @@
 		7FAF78E51E71E40700B84DDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FAF78E71E71E40700B84DDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FAF78EC1E71E40700B84DDA /* MVVMSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FAF78F01E71E40800B84DDA /* MVVMSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMSampleTests.swift; sourceTree = "<group>"; };
 		7FAF78F21E71E40800B84DDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FAF78FB1E71E50E00B84DDA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7FAF78FD1E71E66C00B84DDA /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -49,6 +49,7 @@
 		7FAF79021E71F11300B84DDA /* TitleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleListViewController.swift; sourceTree = "<group>"; };
 		7FAF79041E71F14500B84DDA /* TitleListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleListViewModel.swift; sourceTree = "<group>"; };
 		7FAF79071E71F29000B84DDA /* TitleFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleFetcher.swift; sourceTree = "<group>"; };
+		7FF7C0A31E7C50F9007A7355 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +109,7 @@
 		7FAF78EF1E71E40700B84DDA /* MVVMSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				7FAF78F01E71E40800B84DDA /* MVVMSampleTests.swift */,
+				7FF7C0A31E7C50F9007A7355 /* HomeViewModelTests.swift */,
 				7FAF78F21E71E40800B84DDA /* Info.plist */,
 			);
 			path = MVVMSampleTests;
@@ -232,8 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF7C0A41E7C50F9007A7355 /* HomeViewModelTests.swift in Sources */,
+				7F0673341E81F192009643DD /* TitleFetcher.swift in Sources */,
 				7F2988A61E78145700DDB686 /* MovieGenre.swift in Sources */,
-				7FAF78F11E71E40800B84DDA /* MVVMSampleTests.swift in Sources */,
 				7FAF79061E71F14500B84DDA /* TitleListViewModel.swift in Sources */,
 				7FAF78FF1E71E66C00B84DDA /* HomeViewModel.swift in Sources */,
 			);

@@ -18,14 +18,9 @@ struct HomeViewModel {
     /// model, not the view controller.
     fileprivate let genres: [MovieGenre]
     
-    init() {
+    init(genres: [MovieGenre]) {
         
-        genres = [
-            MovieGenre(id: .action, name: "action", description: "Fast-moving often involving fighting, violence, chaces, etc."),
-            MovieGenre(id: .comedy, name: "comedy", description: "Desinged to make the audience laugh throughout the film."),
-            MovieGenre(id: .horror, name: "horror", description: "Seeks to elicit a negative emotional reaction from viewers by player on their fears."),
-            MovieGenre(id: .sciFi,  name: "sciFi",  description: "Uses speculative, fictional science-based elements.")
-        ]
+        self.genres = genres
     }
 }
 
@@ -61,7 +56,7 @@ extension HomeViewModel {
     
     /// Get the view model for the desired title list view controller.
     ///
-    /// Putting this login in a view model makes it easy to unit text.
+    /// Putting this logicr in a view model makes it easy to unit text.
     func titleListViewModel(forIndex index: Int,
                             delegate: TitleListViewModelDelegate) -> TitleListViewModel {
         
@@ -76,13 +71,13 @@ extension HomeViewModel {
 
 // MARK: - Private helpers
 
-extension HomeViewModel {
+fileprivate extension HomeViewModel {
     
     /// Get the movie genre for the given index.
     ///
     /// Note that if this method was made internal or public, then
     /// the view controller would have direct access to the data
-    /// model, which should almost always be avoided.
+    /// model, which should be avoid if at all possible.
     func genre(forIndex index: Int) -> MovieGenre? {
         
         guard genres.indices.contains(index) else { return nil }

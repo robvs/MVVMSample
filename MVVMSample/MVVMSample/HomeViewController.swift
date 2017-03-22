@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         genreTableView.dataSource = self
         
         // Create the view model and populate the view from it.
-        viewModel = HomeViewModel()
+        viewModel = HomeViewModel(genres: MovieGenre.allGenres)
         populateView()
     }
     

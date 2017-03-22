@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1490" y="129"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Genres-->
         <scene sceneID="ihe-dr-kZq">
             <objects>
                 <viewController id="hGz-MZ-QQT" customClass="HomeViewController" customModule="MVVMSample" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +96,7 @@
                             <constraint firstItem="8oA-y8-OBC" firstAttribute="leading" secondItem="8OQ-mz-qlb" secondAttribute="trailing" constant="8" id="wbH-KQ-Nui"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="t42-6Z-jL8"/>
+                    <navigationItem key="navigationItem" title="Genres" id="8jT-z1-yet"/>
                     <connections>
                         <outlet property="genreDescriptionLabel" destination="8OQ-mz-qlb" id="GGp-Bm-rc0"/>
                         <outlet property="genreTableView" destination="HBW-56-cM5" id="4Gd-ST-PdH"/>
