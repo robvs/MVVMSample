@@ -6,6 +6,8 @@ It's so common for iOS projects to cram way too much code into the View Controll
 Some basic principles:
 - All public View Model properties and methods should be easily testable. For example, an image URL can easily be tested by checking its absoluteString, whereas a UIImage would be difficult to test. In general, it's usually best to avoid having to import UIKit into a view model.
 - The View Model "owns" the data model, and thus does not allow direct access to the data model.
-- View Controllers should never directly access the data model.
-- If data needs to be passed into a view controller from another, then the `viewModel` property should be defined as a forced unwrapped optional and be set by the presenting code.
-- If data does not need to be passed into a view controller from another, then the view model should be instantiated w/in that view controller.
+- The View Model "serves" the view controller, meaning that it does what it can to make things easy for the view controller.
+- If data needs to be passed into a view controller from another, then the `viewModel` property should be defined as a forced unwrapped optional and be set by the presenting code.**
+- If data does not need to be passed into a view controller from another, then the view model should be instantiated w/in that view controller.**
+
+** Not a hard-and-fast rule. The important thing is to be consistent.
