@@ -11,7 +11,7 @@ import XCTest
 
 class HomeViewModelTests: XCTestCase {
     
-    // MARK: Setup/Teardow
+    // MARK: Setup/Teardown
     
     override func setUp() {
         super.setUp()
@@ -119,7 +119,7 @@ class HomeViewModelTests: XCTestCase {
 
 // MARK: - Mock TitleListViewModelDelegate
 
-final class MockTitleListDelegate: TitleListViewModelDelegate {
+fileprivate final class MockTitleListDelegate: TitleListViewModelDelegate {
     
     func refreshDidStart() { }
     func relreshDidComplete() { }

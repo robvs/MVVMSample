@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F0673341E81F192009643DD /* TitleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF79071E71F29000B84DDA /* TitleFetcher.swift */; };
+		7F0673361E81F815009643DD /* TitleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0673351E81F815009643DD /* TitleListViewModelTests.swift */; };
 		7F2988A51E78145700DDB686 /* MovieGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2988A41E78145700DDB686 /* MovieGenre.swift */; };
 		7F2988A61E78145700DDB686 /* MovieGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2988A41E78145700DDB686 /* MovieGenre.swift */; };
 		7FAF78DC1E71E40700B84DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF78DB1E71E40700B84DDA /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F0673351E81F815009643DD /* TitleListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleListViewModelTests.swift; sourceTree = "<group>"; };
 		7F2988A41E78145700DDB686 /* MovieGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieGenre.swift; sourceTree = "<group>"; };
 		7FAF78D81E71E40700B84DDA /* MVVMSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FAF78DB1E71E40700B84DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				7FF7C0A31E7C50F9007A7355 /* HomeViewModelTests.swift */,
+				7F0673351E81F815009643DD /* TitleListViewModelTests.swift */,
 				7FAF78F21E71E40800B84DDA /* Info.plist */,
 			);
 			path = MVVMSampleTests;
@@ -236,6 +239,7 @@
 				7FF7C0A41E7C50F9007A7355 /* HomeViewModelTests.swift in Sources */,
 				7F0673341E81F192009643DD /* TitleFetcher.swift in Sources */,
 				7F2988A61E78145700DDB686 /* MovieGenre.swift in Sources */,
+				7F0673361E81F815009643DD /* TitleListViewModelTests.swift in Sources */,
 				7FAF79061E71F14500B84DDA /* TitleListViewModel.swift in Sources */,
 				7FAF78FF1E71E66C00B84DDA /* HomeViewModel.swift in Sources */,
 			);
